@@ -20,6 +20,7 @@ function addMovieInfo() {
   toggleModal();
   renderDOM(movies);
 
+
   document.querySelector("#movie-name").value =''
   document.querySelector("#thumbnail").value =''
   document.querySelector("#category").value =''
@@ -27,8 +28,6 @@ function addMovieInfo() {
   document.querySelector("#rating").value =''
   document.querySelector("#about").value =''
 
-
-  
 }
 
 let movies = getStorage();
@@ -64,6 +63,8 @@ function renderDOM() {
           </div>
         </div>
         `;
+  document.querySelector('#loader').firstElementChild.remove()
+        
   });
 }
 
